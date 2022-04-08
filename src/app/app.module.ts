@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { CellarComponent } from './cellar/cellar.component';
+import { CellarEditComponent } from './cellar/cellar-edit/cellar-edit.component';
+import { WineListComponent } from './wine-list/wine-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CellarComponent,
+    CellarEditComponent,
+    WineListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
