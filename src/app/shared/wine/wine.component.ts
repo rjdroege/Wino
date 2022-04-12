@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Wine } from './wine.model';
 
 @Component({
   selector: 'app-wine',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wine.component.css']
 })
 export class WineComponent implements OnInit {
+  @Input() wine: Wine;
 
   constructor() { }
 

@@ -1,0 +1,18 @@
+<div class="row mb-3">
+  <div class="col-md-12" *ngFor="let wineEl of myWine; let i = index">
+    <app-wine
+    [wine]="wineEl"
+    [idx]="i"
+    ></app-wine>
+    <button
+    class="float-right"
+    style="border: none; font-size: 16px"
+    >&minus;</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-primary">Add New Wine</button>
+  </div>
+</div>
