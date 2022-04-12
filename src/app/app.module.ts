@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { CellarComponent } from './cellar/cellar.component';
 import { CellarEditComponent } from './cellar/cellar-edit/cellar-edit.component';
 import { WineListComponent } from './wine-list/wine-list.component';
+import { WineComponent } from './shared/wine/wine.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { WineListComponent } from './wine-list/wine-list.component';
     HeaderComponent,
     CellarComponent,
     CellarEditComponent,
-    WineListComponent
+    WineListComponent,
+    WineComponent
   ],
   imports: [
     BrowserModule,
