@@ -18,4 +18,12 @@ export class CellarService {
   getWine(){
     return this.myWine.slice();
   }
+
+  addWine(wine: Wine){
+    this.myWine.push(wine);
+  }
+
+  removeWine(idx: number){
+    this.myWine.splice(idx);
+  }
 }
