@@ -1,0 +1,15 @@
+div {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://libreshot.com/wp-content/uploads/2018/08/wine-barrels.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ h1 {
+   color: rgb(234, 11, 48);
+   text-emphasis: bold;
+   position: relative;
+   text-align: center;
+   top: 100px;
+  }

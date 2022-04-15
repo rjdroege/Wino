@@ -5,9 +5,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CellarComponent } from './cellar/cellar.component';
 import { CellarEditComponent } from './cellar/cellar-edit/cellar-edit.component';
-import { WineListComponent } from './wine-list/wine-list.component';
 import { WineComponent } from './shared/wine/wine.component';
 import { CellarListComponent } from './cellar/cellar-list/cellar-list.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CellarDetailsComponent } from './cellar/cellar-details/cellar-details.component';
+import { CellarEditorComponent } from './cellar/cellar-editor/cellar-editor.component';
+import { CellarHomeComponent } from './cellar/cellar-home/cellar-home.component';
+import { StoreComponent } from './store/store.component';
+import { StoreSearchComponent } from './store/store-search/store-search.component';
+import { StoreResultsComponent } from './store/store-results/store-results.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +22,20 @@ import { CellarListComponent } from './cellar/cellar-list/cellar-list.component'
     HeaderComponent,
     CellarComponent,
     CellarEditComponent,
-    WineListComponent,
     WineComponent,
-    CellarListComponent
+    CellarListComponent,
+    HomePageComponent,
+    CellarDetailsComponent,
+    CellarEditorComponent,
+    CellarHomeComponent,
+    StoreComponent,
+    StoreSearchComponent,
+    StoreResultsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
