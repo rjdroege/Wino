@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Wine } from 'src/app/shared/wine/wine.model';
 import { CellarService } from '../cellar.service';
 
@@ -11,10 +12,18 @@ export class CellarListComponent implements OnInit {
   @Input() wine: Wine;
   myWine: Wine[]= [];
 
-  constructor(private cellarService: CellarService) { }
+  constructor(private cellarService: CellarService, private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
-    this.myWine = this.cellarService.getWine();
+    this.myWine = this.cellarService.getWines();
   }
 
+  onNewWine(){
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
+  onRemoveWine(idx){
+    this.cellarService.removeWine(idx);
+  }
 }

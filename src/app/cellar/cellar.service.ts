@@ -1,4 +1,5 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { Wine } from "../shared/wine/wine.model";
 
 @Injectable({
@@ -6,8 +7,8 @@ import { Wine } from "../shared/wine/wine.model";
 })
 
 export class CellarService {
-  wineSelected = new EventEmitter<Wine>();
-  wineListChanged = new EventEmitter<Wine[]>();
+  wineSelected = new Subject<Wine>();
+  wineListChanged = new Subject<Wine[]>();
 
   private myWine: Wine[] = [
     new Wine(2018, 'Chateau Montelena', 'Chardonnay', 'https://www.californianwines.eu/imagegen.php?autoimage=0556'),
@@ -15,8 +16,17 @@ export class CellarService {
     new Wine(1985, 'Tignanello', 'Sangiovese', 'https://www.wine-searcher.com/images/labels/83/34/10588334.jpg?width=260&height=260&fit=bounds&canvas=260,260')
   ]
 
-  getWine(){
+  getWines(){
     return this.myWine.slice();
+  }
+
+  getWine(idx: number){
+    return this.myWine.slice()[idx];
+  }
+
+  saveWine(wine: Wine){
+    this.myWine.push(wine);
+    this.wineListChanged.next(this.myWine.slice());
   }
 
   addWine(wine: Wine){
@@ -25,5 +35,7 @@ export class CellarService {
 
   removeWine(idx: number){
     this.myWine.splice(idx);
+    this.wineListChanged.next(this.myWine.slice());
+    console.log("wine removed");
   }
 }

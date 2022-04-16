@@ -10,7 +10,6 @@ import { CellarListComponent } from './cellar/cellar-list/cellar-list.component'
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CellarDetailsComponent } from './cellar/cellar-details/cellar-details.component';
-import { CellarEditorComponent } from './cellar/cellar-editor/cellar-editor.component';
 import { CellarHomeComponent } from './cellar/cellar-home/cellar-home.component';
 import { StoreComponent } from './store/store.component';
 import { StoreSearchComponent } from './store/store-search/store-search.component';
@@ -26,7 +25,6 @@ import { StoreResultsComponent } from './store/store-results/store-results.compo
     CellarListComponent,
     HomePageComponent,
     CellarDetailsComponent,
-    CellarEditorComponent,
     CellarHomeComponent,
     StoreComponent,
     StoreSearchComponent,

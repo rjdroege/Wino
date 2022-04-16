@@ -1,1 +1,50 @@
-<p>cellar-details works!</p>
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{ wine.vinyard }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{ wine.grape }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{ wine.year }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <img [src]="wine.imagePath" [alt]="wine.grape" class="img-responsive" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <small>Tags</small>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="dropdown" appDropdown>
+      <button
+        class="btn btn-priary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Edit Wine
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="onEditWine()">Update Wine</a>
+        <a class="dropdown-item" (click)="onRemoveWine(idx)">Delete Wine</a>
+      </div>
+    </div>
+  </div>
+</div>
