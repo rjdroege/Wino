@@ -12,11 +12,13 @@ export class CellarListComponent implements OnInit {
   @Input() wine: Wine;
   myWine: Wine[]= [];
 
-  constructor(private cellarService: CellarService, private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private cellarService: CellarService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.myWine = this.cellarService.getWines();
+    this.cellarService.wineListChanged.subscribe((wines: Wine[]) =>{
+      this.myWine = wines;
+    })
   }
 
   onNewWine(){

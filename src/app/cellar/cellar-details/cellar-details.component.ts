@@ -14,12 +14,14 @@ export class CellarDetailsComponent implements OnInit {
               private route: ActivatedRoute) { }
   wine: Wine;
   idx: number;
+  collapsed: Boolean = true;
+  show: Boolean = false;
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.idx = +params['id'];
       this.wine = this.cellarService.getWine(this.idx);
-    })
+    });
   }
 
   onEditWine(){

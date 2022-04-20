@@ -34,8 +34,10 @@ export class CellarService {
   }
 
   removeWine(idx: number){
-    this.myWine.splice(idx);
+    if (idx !== -1) {
+    this.myWine.splice(idx, 1);
     this.wineListChanged.next(this.myWine.slice());
     console.log("wine removed");
   }
+}
 }

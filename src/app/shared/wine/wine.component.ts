@@ -8,6 +8,7 @@ import { Wine } from './wine.model';
 })
 export class WineComponent implements OnInit {
   @Input() wine: Wine;
+  @Input() idx: number;
 
   constructor() { }
 
