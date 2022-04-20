@@ -1,14 +1,14 @@
 import { Directive, OnInit, Renderer2, ElementRef, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appDropdown]'
+  selector: '[appDropdown]',
 })
 export class DropdownDirective implements OnInit {
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
   @HostBinding("class.show") isOpen = false;
 
-  @HostListener('click') toggleOpen() {
+  @HostListener("click") toggleOpen() {
     this.isOpen = !this.isOpen;
 
     let dropdownList = this.elementRef.nativeElement.querySelector('.dropdown-menu');
