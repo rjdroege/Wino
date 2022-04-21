@@ -14,6 +14,8 @@ import { CellarHomeComponent } from './cellar/cellar-home/cellar-home.component'
 import { StoreComponent } from './store/store.component';
 import { StoreSearchComponent } from './store/store-search/store-search.component';
 import { StoreResultsComponent } from './store/store-results/store-results.component';
+import { DropdownDirective } from './shared/Directives/dropdown.directive';
+import { CellarFormComponent } from './cellar/cellar-form/cellar-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { StoreResultsComponent } from './store/store-results/store-results.compo
     CellarHomeComponent,
     StoreComponent,
     StoreSearchComponent,
-    StoreResultsComponent
+    StoreResultsComponent,
+    DropdownDirective,
+    CellarFormComponent
   ],
   imports: [
     BrowserModule,
