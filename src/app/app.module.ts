@@ -16,6 +16,7 @@ import { StoreSearchComponent } from './store/store-search/store-search.componen
 import { StoreResultsComponent } from './store/store-results/store-results.component';
 import { DropdownDirective } from './shared/Directives/dropdown.directive';
 import { CellarFormComponent } from './cellar/cellar-form/cellar-form.component';
+import { PnfComponent } from './shared/pnf/pnf.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CellarFormComponent } from './cellar/cellar-form/cellar-form.component'
     StoreSearchComponent,
     StoreResultsComponent,
     DropdownDirective,
-    CellarFormComponent
+    CellarFormComponent,
+    PnfComponent
   ],
   imports: [
     BrowserModule,

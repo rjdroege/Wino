@@ -5,6 +5,7 @@ import { CellarEditComponent } from "./cellar/cellar-edit/cellar-edit.component"
 import { CellarHomeComponent } from "./cellar/cellar-home/cellar-home.component";
 import { CellarComponent } from "./cellar/cellar.component";
 import { HomePageComponent } from "./home-page/home-page.component";
+import { PnfComponent } from "./shared/pnf/pnf.component";
 import { StoreComponent } from "./store/store.component";
 
 const appRoutes: Routes = [
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
     { path: ':id', component: CellarDetailsComponent},
     { path: ':id/edit', component: CellarEditComponent}
   ]},
-  { path: 'store', component: StoreComponent}
+  { path: 'store', component: StoreComponent},
+  { path: '**', component: PnfComponent}
 ];
 
 @NgModule({
