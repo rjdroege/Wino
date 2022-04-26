@@ -1,5 +1,5 @@
 div {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://libreshot.com/wp-content/uploads/2018/08/wine-barrels.jpg");
+  background: url("/assets/cellar.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,10 +7,10 @@ div {
 }
 
  h1 {
-   color: rgb(234, 11, 48);
+   color: rgb(15, 3, 5);
    text-emphasis: bold;
    position: relative;
    text-align: center;
-   top: 30px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   top: 130px;
+   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   }
