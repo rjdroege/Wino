@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Wine } from 'src/app/shared/wine/wine.model';
 import { CellarService } from '../cellar.service';
 
@@ -8,15 +9,16 @@ import { CellarService } from '../cellar.service';
   templateUrl: './cellar-list.component.html',
   styleUrls: ['./cellar-list.component.css']
 })
-export class CellarListComponent implements OnInit {
+export class CellarListComponent implements OnInit, OnDestroy {
   @Input() wine: Wine;
   myWine: Wine[]= [];
+  cellarSub: Subscription;
 
   constructor(private cellarService: CellarService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.myWine = this.cellarService.getWines();
-    this.cellarService.wineListChanged.subscribe((wines: Wine[]) =>{
+   this.cellarSub = this.cellarService.wineListChanged.subscribe((wines: Wine[]) =>{
       this.myWine = wines;
     })
   }
@@ -27,5 +29,9 @@ export class CellarListComponent implements OnInit {
 
   onRemoveWine(idx){
     this.cellarService.removeWine(idx);
+  }
+
+  ngOnDestroy(): void {
+      this.cellarSub.unsubscribe();
   }
 }
