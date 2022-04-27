@@ -1,14 +1,9 @@
 <div class="row mb-3">
-  <div class="col-md-9" *ngFor="let wineEl of myWine; let i = index">
+  <div class="col-md-9 wine" *ngFor="let wineEl of myWine; let i = index">
     <app-wine
     [wine]="wineEl"
     [idx]="i"
     ></app-wine>
-    <button
-    class="float-right"
-    style="border: none; font-size: 16px"
-    (click)="onRemoveWine(i)"
-    >&minus;</button>
   </div>
 </div>
 <hr />

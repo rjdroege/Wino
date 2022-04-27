@@ -2,4 +2,6 @@ form .ng-touched.ng-invalid {
   border: 1px solid crimson;
 }
 
-
+.form-control {
+  max-width: 500px;
+}

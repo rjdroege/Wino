@@ -1,5 +1,5 @@
 div {
-  background: url("/assets/cellar.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/cellar.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,10 +7,11 @@ div {
 }
 
  h1 {
-   color: rgb(15, 3, 5);
+   color: rgb(222, 65, 65);
+   font-size: 80px;
    text-emphasis: bold;
    position: relative;
    text-align: center;
-   top: 130px;
-   font-family: Impact, 'Arial Narrow Bold', sans-serif;
+   top: 150px;
+   font-family:serif ;
   }

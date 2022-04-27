@@ -30,6 +30,7 @@ export class CellarDetailsComponent implements OnInit {
 
   onRemoveWine(){
     this.cellarService.removeWine(this.idx);
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
 }
