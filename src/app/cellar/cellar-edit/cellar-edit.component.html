@@ -1,1 +1,40 @@
-<app-cellar-form></app-cellar-form>
+<form (ngSubmit)="onFormSubmit(templateFormRef)" #templateFormRef="ngForm">
+  <div id="wine-data">
+    <div class="form-group">
+      <label for="vinyard">Vinyard</label>
+      <input type="text" id="vinyard" name="vinyard" class="form-control" #vinyardRef="ngModel" ngModel required />
+      <span class="help-block text-danger" *ngIf="vinyardRef.touched && !vinyardRef.valid">Please enter a vinyard.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="grape">Grape</label>
+      <input
+        type="text"
+        id="grape"
+        name="grape"
+        class="form-control"
+        #grapeRef="ngModel"
+        ngModel
+        required
+      />
+      <span class="help-block text-danger"
+       *ngIf="grapeRef.touched && !grapeRef.valid">Please enter a grape.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input
+        type="text"
+        id="year"
+        name="year"
+        class="form-control"
+        #yearRef="ngModel"
+        ngModel
+        required
+      />
+      <span class="help-block text-danger" *ngIf="yearRef.touched && !yearRef.valid">Please enter a year.</span>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!templateFormRef.valid">Submit</button>
+  </div>
+</form>

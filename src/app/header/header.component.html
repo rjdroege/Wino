@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Custom Cellars</a>
+  <a class="navbar-brand" routerLink="/home">Custom Cellars</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,44 +7,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Cellar <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/cellar">Cellar <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Store</a>
+        <a class="nav-link" routerLink="/store">Store</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Settings
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-expand-lg mb-4">
-  <a class="navbar-brand brand" id="brand" routerLink="/home">Custom Cellars</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarToggler"
-  [class.collapse]="collapsed" (window:resize)="collapsed = true">
-    <ul class="navbar-nav  mr auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/cellar" routerLinkActive="active">Cellar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/store" routerLinkActive="active">Store</a>
-    </ul>
-    <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a
         class="nav-link dropdown toggle"
@@ -56,17 +23,17 @@
         (click)="show = !show"
         [class.show]="show"
         >
-        Settings
+          Settings
         </a>
-        <div class="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-            [class.show]="show"
-        >
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" [class.show]="show">
           <a class="dropdown-item" href="#">User Details</a>
           <a class="dropdown-item" href="#">Log Out</a>
-
         </div>
       </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-</nav> -->
+</nav>
