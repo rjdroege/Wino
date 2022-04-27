@@ -1,8 +1,8 @@
 export class Wine {
     constructor(
-      public year: string,
       public vinyard: string,
       public grape: string,
+      public year: string,
       public imagePath: string
       ) {}
 }

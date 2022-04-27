@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { CellarService } from '../cellar.service';
+import { Wine } from 'src/app/shared/wine/wine.model';
 
 @Component({
   selector: 'app-cellar-edit',
@@ -10,8 +11,7 @@ import { CellarService } from '../cellar.service';
 })
 
 export class CellarEditComponent implements OnInit {
-  formHasBeenSubmitted: Boolean = false;
-  wineDetails = {
+  wineDetails: Wine = {
     vinyard: '',
     grape: '',
     year: '',
@@ -34,11 +34,18 @@ export class CellarEditComponent implements OnInit {
 }
 
 onFormSubmit(formObj: NgForm){
-  this.formHasBeenSubmitted = true;
-  this.wineDetails.vinyard = formObj.value.vinyard;
-  this.wineDetails.grape = formObj.value.grape;
-  this.wineDetails.year = formObj.value.year;
-  this.wineDetails.imagePath = formObj.value.imagePath;
+  const { vinyard, grape, year, imagePath } = formObj.value;
+  this.wineDetails = new Wine(
+    vinyard,
+    grape,
+    year,
+    imagePath
+  );
+  if (this.isEditMode){
+    this.cellarService.updateWine(this.idx, this.wineDetails);
+  } else {
+    this.cellarService.addWine(this.wineDetails);
+  }
   this.onFormReset();
   };
 

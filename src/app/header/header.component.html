@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/cellar">Cellar <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/cellar" routerLinkActive="active">Cellar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/store">Store</a>
+        <a class="nav-link" routerLink="/store" routerLinkActive="active">Store</a>
       </li>
       <li class="nav-item dropdown">
         <a
@@ -25,7 +25,10 @@
         >
           Settings
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" [class.show]="show">
+        <div class="dropdown-menu"
+        aria-labelledby="navbarDropdown"
+        [class.show]="show"
+        >
           <a class="dropdown-item" href="#">User Details</a>
           <a class="dropdown-item" href="#">Log Out</a>
         </div>
