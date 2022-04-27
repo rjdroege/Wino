@@ -7,6 +7,7 @@ import { CellarComponent } from "./cellar/cellar.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { PnfComponent } from "./shared/pnf/pnf.component";
 import { StoreComponent } from "./store/store.component";
+import { UserComponent } from "./user/user.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     { path: ':id/edit', component: CellarEditComponent}
   ]},
   { path: 'store', component: StoreComponent},
+  { path: 'user', component: UserComponent},
   { path: '**', component: PnfComponent}
 ];
 

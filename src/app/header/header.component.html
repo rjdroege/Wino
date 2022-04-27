@@ -29,7 +29,7 @@
         aria-labelledby="navbarDropdown"
         [class.show]="show"
         >
-          <a class="dropdown-item" href="#">User Details</a>
+          <a class="dropdown-item" routerLink="/user" (click)="show = !show">User Details</a>
           <a class="dropdown-item" href="#">Log Out</a>
         </div>
       </li>

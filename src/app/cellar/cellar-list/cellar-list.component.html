@@ -1,11 +1,13 @@
 <div class="row mb-3">
-  <div class="col-md-9 wine" *ngFor="let wineEl of myWine; let i = index">
-    <app-wine
-    [wine]="wineEl"
-    [idx]="i"
-    ></app-wine>
+    <div class="col-md-4 wine" *ngFor="let wineEl of myWine; let i = index">
+      <app-wine
+      [wine]="wineEl"
+      [idx]="i"
+      ></app-wine>
+    </div>
   </div>
-</div>
+
+
 <hr />
 <div class="row">
   <div class="col-md-12">

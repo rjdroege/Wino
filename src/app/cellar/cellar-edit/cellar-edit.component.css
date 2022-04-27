@@ -5,3 +5,7 @@ form .ng-touched.ng-invalid {
 .form-control {
   max-width: 500px;
 }
+
+.btn-warning {
+  margin-left: 5px;
+}

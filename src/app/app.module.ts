@@ -17,6 +17,8 @@ import { StoreResultsComponent } from './store/store-results/store-results.compo
 import { DropdownDirective } from './shared/Directives/dropdown.directive';
 import { PnfComponent } from './shared/pnf/pnf.component';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,15 @@ import { ClickOutsideModule } from 'ng-click-outside';
     StoreSearchComponent,
     StoreResultsComponent,
     DropdownDirective,
-    PnfComponent
+    PnfComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
