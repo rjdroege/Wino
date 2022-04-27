@@ -1,9 +1,17 @@
-<form (ngSubmit)="onFormSubmit(templateFormRef)" #templateFormRef="ngForm">
+<form (ngSubmit)="onFormSubmit(formRef)" #formRef="ngForm">
   <div id="wine-data">
     <div class="form-group">
       <label for="vinyard">Vinyard</label>
-      <input type="text" id="vinyard" name="vinyard" class="form-control" #vinyardRef="ngModel" ngModel required />
-      <span class="help-block text-danger" *ngIf="vinyardRef.touched && !vinyardRef.valid">Please enter a vinyard.</span>
+      <input
+      type="text"
+      id="vinyard"
+      name="vinyard"
+      class="form-control"
+      #vinyardRef="ngModel"
+      [ngModel]="wineDetails.vinyard"
+      required />
+      <span class="help-block text-danger"
+      *ngIf="vinyardRef.touched && !vinyardRef.valid">Please enter a vinyard.</span>
     </div>
 
     <div class="form-group">
@@ -14,7 +22,7 @@
         name="grape"
         class="form-control"
         #grapeRef="ngModel"
-        ngModel
+        [ngModel]="wineDetails.grape"
         required
       />
       <span class="help-block text-danger"
@@ -29,12 +37,33 @@
         name="year"
         class="form-control"
         #yearRef="ngModel"
-        ngModel
+        [ngModel]="wineDetails.year"
         required
       />
       <span class="help-block text-danger" *ngIf="yearRef.touched && !yearRef.valid">Please enter a year.</span>
     </div>
-
-    <button class="btn btn-primary" type="submit" [disabled]="!templateFormRef.valid">Submit</button>
+    <div class="form-group">
+      <label for="imagePath">Image Path</label>
+      <input
+        type="text"
+        id="imagePath"
+        name="imagePath"
+        class="form-control"
+        #imgRef="ngModel"
+        [ngModel]="wineDetails.imagePath"
+        required
+      />
+      <span class="help-block text-danger" *ngIf="imgRef.touched && !imgRef.valid">Please enter an image path.</span>
+    </div>
+    <div class="row-my-2">
+      <div class="col-xs-12 mx-auto">
+        <img *ngIf="imgRef.valid"
+        class="img-responsive"
+        [src]="formRef.value['imagePath']"
+        [alt]="formRef.value['Vinyard']"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!formRef.valid">Submit</button>
   </div>
 </form>
